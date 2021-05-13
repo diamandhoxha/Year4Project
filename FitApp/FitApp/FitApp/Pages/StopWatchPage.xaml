@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FitApp.Pages.StopWatchPage"
+             BackgroundColor="#263A4F">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="lblStopWatch" 
+                   FontSize="40"
+                   TextColor="White"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   Margin="0,150">
+
+            </Label>
+            <Button BackgroundColor="Orange" x:Name="btnStart" Clicked="btnStart_Clicked" Text="Start" WidthRequest="350" HorizontalOptions="Center"></Button>
+            <Button BackgroundColor="DarkOrange" x:Name="btnStop" Clicked="btnStop_Clicked" Text="Stop" WidthRequest="350" HorizontalOptions="Center"></Button>
+            <Button BackgroundColor="OrangeRed" x:Name="btnReset" Clicked="btnReset_Clicked" Text="Reset" WidthRequest="350" HorizontalOptions="Center"></Button>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

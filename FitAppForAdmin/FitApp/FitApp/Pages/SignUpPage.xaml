@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:renderers="clr-namespace:FitApp.Renderers"
+             mc:Ignorable="d"
+             x:Class="FitApp.Pages.SignUpPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#263A4F">
+    <ContentPage.Content>
+
+        <StackLayout Margin="20"
+                     Spacing="15">
+            <Image Source="backicon.png"
+                       HorizontalOptions="Start"
+                       Aspect="AspectFit">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer x:Name="ImgBack" Tapped="ImgBack_Tapped"/>
+                </Image.GestureRecognizers>
+            </Image>
+            <Label Text="SIGN UP"
+                   TextColor="White"
+                   VerticalOptions="Start"
+                   HorizontalOptions="CenterAndExpand"
+                   FontSize="Title" />
+            <Image Source="adduser.png"
+                   Margin="0,40,0,0"
+                   HorizontalOptions="Center"
+                   HeightRequest="80"
+                   WidthRequest="80" />
+
+            <!-- Enter name -->
+            <renderers:BorderlessEntry Placeholder="Name"
+                                       x:Name="EntName"
+                                       TextColor="White"
+                                       PlaceholderColor="White"
+                                       BackgroundColor="#263A4F" />
+            <BoxView HeightRequest="1"
+                     BackgroundColor="White"
+                     Margin="0,-15,0,0" />
+
+
+            <!-- Enter email -->
+            <renderers:BorderlessEntry Placeholder="Email"
+                                       x:Name="EntEmail"
+                                       TextColor="White"
+                                       PlaceholderColor="White"
+                                       BackgroundColor="#263A4F" 
+                                       Keyboard="Email"/>
+            <BoxView HeightRequest="1"
+                     BackgroundColor="White"
+                     Margin="0,-15,0,0" />
+            
+            <!-- Enter password -->
+            <renderers:BorderlessEntry Placeholder="Password"
+                                       x:Name="EntPassword"
+                                       IsPassword="True"
+                                       TextColor="White"
+                                       PlaceholderColor="White"
+                                       BackgroundColor="#263A4F" />
+            <BoxView HeightRequest="1"
+                     BackgroundColor="White"
+                     Margin="0,-15,0,0" />
+
+            <!-- Enter weight -->
+            <renderers:BorderlessEntry Placeholder="Weight in kg"
+                                       x:Name="EntWeight"
+                                       TextColor="White"
+                                       PlaceholderColor="White"
+                                       BackgroundColor="#263A4F" />
+            <BoxView HeightRequest="1"
+                     BackgroundColor="White"
+                     Margin="0,-15,0,0" />
+
+            <!-- Enter height -->
+            <renderers:BorderlessEntry Placeholder="Height in centimeters"
+                                       x:Name="EntHeight"
+                                       TextColor="White"
+                                       PlaceholderColor="White"
+                                       BackgroundColor="#263A4F" 
+                                       Keyboard="Numeric"/>
+            <BoxView HeightRequest="1"
+                     BackgroundColor="White"
+                     Margin="0,-15,0,0" />
+
+            <!-- Sign up/go to login page -->
+            <Image Source="signup.png"
+                   Margin="0,40,0,0">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer x:Name="ImgSignup" Tapped="ImgSignup_Tapped"/>
+                </Image.GestureRecognizers>
+            </Image>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

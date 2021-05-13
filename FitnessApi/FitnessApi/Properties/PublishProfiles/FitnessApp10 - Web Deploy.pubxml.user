@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAhPa0Lm8AkUiThIIaDMd8hgAAAAACAAAAAAAQZgAAAAEAACAAAADVop69aq9c5EqY1eBapFy3HoM79YbIXVCANYXqpRQ5ygAAAAAOgAAAAAIAACAAAAA6jrtrYSkHaQ9FjJsMohN5Eq7ZWEsjo4xI+Atfsx2K/IAAAABJAA0E3XUI8WoDbaEBY7nx8+e2MYaQauFFidnNFUGooZyMiYUQeZkGgGsVWZrU6BnC9UZ19Ids46nW8660L4fGqmfQ96XHQdpoWenRDlS6aaaVq+XTXlpYYcXuSVM63xA5sdEhT61elsTYCXQ+QXYztt08MHSvY0HRnByzQboZmUAAAAA+2VtMNe6xSn7yjW1hPugd94EcV/8W9v3Noh6L9G6ZqaU4Zz+NaXkqnTkabauQL66N10T/qhc0rp0aaRObeZOY</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <EFMigrations Include="FitnessApi.Data.FitnessDbContext">
+      <Value>Server=tcp:fitnessappserver.database.windows.net,1433%3bInitial Catalog=FitnessDatabase%3bPersist Security Info=False%3bUser ID=Diamand%3bPassword=Thebeast7564.%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

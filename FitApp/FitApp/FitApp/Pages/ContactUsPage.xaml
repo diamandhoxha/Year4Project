@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FitApp.Pages.ContactUsPage"
+             BackgroundColor="#263A4F">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid Margin="20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="8*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="backicon.png"
+                       Grid.Column="0"
+                       HorizontalOptions="Center">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="TapBack" Tapped="TapBack_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Label Grid.Column="1"
+                       TextColor="White"
+                       Text="Contact Us"
+                       FontSize="Large"
+                       FontAttributes="Bold"
+                       HorizontalTextAlignment="Center" />
+            </Grid>
+            <Label Margin="20"
+                   Text="For further support you can contact us with the multiple options below"
+                   TextColor="White"
+                   FontSize="Body" />
+            <Button x:Name="BtnCall"
+                    Margin="50,20,50,0"
+                    Text="Call 087 360 1227"
+                    BackgroundColor="White"
+                    TextColor="Black"
+                    FontSize="Medium"
+                    CornerRadius="25" 
+                    Clicked="BtnCall_Clicked"/>
+            <Button x:Name="BtnEmail"
+                    Margin="50,20,50,0"
+                    Text="Email Us"
+                    BackgroundColor="White"
+                    TextColor="Black"
+                    FontSize="Medium"
+                    CornerRadius="25" 
+                    Clicked="BtnEmail_Clicked"/>
+            <Button x:Name="BtnSMS"
+                    Margin="50,20,50,0"
+                    Text="Send SMS"
+                    BackgroundColor="White"
+                    TextColor="Black"
+                    FontSize="Medium"
+                    CornerRadius="25" 
+                    Clicked="BtnSMS_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

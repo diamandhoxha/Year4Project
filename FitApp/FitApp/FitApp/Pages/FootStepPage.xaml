@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FitApp.Pages.FootStepPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="xResult" Text="X: 0"/>
+            <Label x:Name="yResult" Text="Y: 0"/>
+            <Label x:Name="zResult" Text="Z: 0"/>
+            <Label x:Name="result" Text="Result"/>
+            <Button Text="Toggle" Clicked="Button_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

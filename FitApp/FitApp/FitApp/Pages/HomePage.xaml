@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TabbedPage 
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:local="clr-namespace:FitApp.Pages"
+	x:Class="FitApp.Pages.HomePage">
+    <local:WorkoutPage Title="Workouts"/>
+    <local:ExercisesPage Title="Exercises"/>
+    <local:StopWatchPage Title="Stopwatch"/>
+    <local:BMIPage Title="BMI"/>
+    <!-- Logout Button -->
+    <TabbedPage.ToolbarItems>
+        <ToolbarItem Priority="0" Order="Primary"/>
+        <ToolbarItem Text="My Info" Order="Secondary" x:Name="Profile" Clicked="Profile_Clicked"/>
+        <ToolbarItem Text="Contact Us" Order="Secondary" x:Name="ContactUs" Clicked="ContactUs_Clicked"/>
+        <ToolbarItem Text="Logout" Order="Secondary" x:Name="Tblogout" Clicked="Tblogout_Clicked"/>
+        <ToolbarItem Text="Steps" Order="Secondary" x:Name="Steps" Clicked="Steps_Clicked"/>
+    </TabbedPage.ToolbarItems>
+    
+</TabbedPage>

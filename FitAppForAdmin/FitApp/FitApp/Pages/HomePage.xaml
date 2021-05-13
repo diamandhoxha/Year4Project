@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="FitApp.Pages.HomePage"
+    BackgroundColor="#263A4F">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Priority="0" Order="Primary"/>
+        <ToolbarItem Text="Logout" Order="Secondary" x:Name="Tblogout" Clicked="Tblogout_Clicked"/>
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <StackLayout Margin="0,60,0,0"
+                     Spacing="50">
+            <Label Text="Admin Panel"
+                   HorizontalOptions="Center"
+                   TextColor="White"
+                   FontSize="Title" />
+            <Button x:Name="BtnUsers"
+                    TextColor="White"
+                    BackgroundColor="#4d5d6e"
+                    FontSize="Title"
+                    HeightRequest="180"
+                    Text="Users" Clicked="BtnUsers_Clicked"/>
+            <Button x:Name="BtnExercises"
+                    TextColor="White"
+                    BackgroundColor="#4d5d6e"
+                    FontSize="Title"
+                    HeightRequest="180"
+                    Text="Exercises" Clicked="BtnExercises_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

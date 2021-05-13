@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FitApp.Pages.UsersPage"
+             BackgroundColor="#263A4F">
+    <ContentPage.Content>
+        <StackLayout Spacing="20"
+                     Margin="20">
+                <Grid Margin="0,0,0,20">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1.5*" />
+                        <ColumnDefinition Width="7*" />
+                        <ColumnDefinition Width="1.5*" />
+                    </Grid.ColumnDefinitions>
+                <Image Source="backicon.png"
+                       HorizontalOptions="Start"
+                       Grid.Column="0"
+                       Aspect="AspectFit">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="ImgBack"  Tapped="ImgBack_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                </Grid>
+            
+                <CollectionView x:Name="CvUsers"
+                            SelectionMode="Single"
+                            RemainingItemsThreshold="1"
+                            RemainingItemsThresholdReached="CvUsers_RemainingItemsThresholdReached"
+                            SelectionChanged="CvUsers_SelectionChanged">
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Vertical"
+                                       ItemSpacing="10" />
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame BackgroundColor="#131C25"
+                               Margin="0,20,0,0"
+                               HasShadow="False">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0.4*" />
+                                        <ColumnDefinition Width="0.4*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="Name: "
+                                       TextColor="#F38914"
+                                       Grid.Row="0"
+                                       Grid.Column="0"/>
+                                    <Label TextColor="White"
+                                       Grid.Row="0"
+                                       Grid.Column="1" 
+                                       Text="{Binding Name}"/>
+                                    <Label Text="Email: "
+                                       TextColor="#F38914"
+                                       Grid.Row="1"
+                                       Grid.Column="0"/>
+                                    <Label TextColor="White"
+                                       Grid.Row="1"
+                                       Grid.Column="1" 
+                                       Text="{Binding Email}"/>
+                                    <Label Text="Weight: "
+                                       TextColor="#F38914"
+                                       Grid.Row="2"
+                                       Grid.Column="0"/>
+                                    <Label TextColor="White"
+                                       Grid.Row="2"
+                                       Grid.Column="1" 
+                                       Text="{Binding Weight}"/>
+                                <Label Text="Height: "
+                                       TextColor="#F38914"
+                                       Grid.Row="3"
+                                       Grid.Column="0"/>
+                                <Label TextColor="White"
+                                       Grid.Row="3"
+                                       Grid.Column="1" 
+                                       Text="{Binding Height}"/>
+                            </Grid>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </StackLayout>
+        </ContentPage.Content>
+</ContentPage>

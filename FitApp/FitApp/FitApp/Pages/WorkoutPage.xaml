@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FitApp.Pages.WorkoutPage"
+             BackgroundColor="#263A4F">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="+"
+                     Clicked="ToolbarItem_Clicked" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout Spacing="20"
+                     Margin="20">
+            <Grid Margin="0,0,0,20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1.5*" />
+                    <ColumnDefinition Width="7*" />
+                    <ColumnDefinition Width="1.5*" />
+                </Grid.ColumnDefinitions>
+
+
+            </Grid>
+            <CollectionView x:Name="CvWorkouts"
+                            SelectionMode="Single"
+                            RemainingItemsThreshold="1"
+                            RemainingItemsThresholdReached="CvWorkouts_RemainingItemsThresholdReached"
+                            SelectionChanged="CvWorkouts_SelectionChanged">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical"
+                                       ItemSpacing="10" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame BackgroundColor="#131C25"
+                               Margin="0,20,0,0"
+                               HasShadow="False">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.4*" />
+                                    <ColumnDefinition Width="0.4*" />
+                                </Grid.ColumnDefinitions>
+                                <Label Text="WorkoutName: "
+                                       TextColor="#F38914"
+                                       Grid.Row="0"
+                                       Grid.Column="0"/>
+                                <Label TextColor="White"
+                                       Grid.Row="0"
+                                       Grid.Column="1" 
+                                       Text="{Binding WorkoutName}"/>
+                                <Label Text="Reps: "
+                                       TextColor="#F38914"
+                                       Grid.Row="1"
+                                       Grid.Column="0"/>
+                                <Label TextColor="White"
+                                       Grid.Row="1"
+                                       Grid.Column="1" 
+                                       Text="{Binding Reps}"/>
+                                <Label Text="Sets: "
+                                       TextColor="#F38914"
+                                       Grid.Row="2"
+                                       Grid.Column="0"/>
+                                <Label TextColor="White"
+                                       Grid.Row="2"
+                                       Grid.Column="1" 
+                                       Text="{Binding Sets}"/>
+                                <Label Text="Date"
+                                       TextColor="#F38914"
+                                       Grid.Row="3"
+                                       Grid.Column="0" />
+                                <Label Grid.Row="3"
+                                       Grid.Column="1" TextColor="White">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="{Binding Date}" />
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

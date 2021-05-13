@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:renderers="clr-namespace:FitApp.Renderers"
+             x:Class="FitApp.Pages.SMSPage"
+             BackgroundColor="#263A4F">
+    <ContentPage.Content>
+        <StackLayout Margin="15,20,15,0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1.5*" />
+                    <ColumnDefinition Width="7*" />
+                    <ColumnDefinition Width="1.5*" />
+                </Grid.ColumnDefinitions>
+
+            </Grid>
+            <Image Source="backicon.png"
+                       HorizontalOptions="Start"
+                       Grid.Column="0"
+                       Aspect="AspectFit">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer x:Name="ImgBack" Tapped="ImgBack_Tapped"/>
+                </Image.GestureRecognizers>
+            </Image>
+            <Grid Margin="0,15,0,0"
+                  HeightRequest="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="4.5*" />
+                    <ColumnDefinition Width="5.5*" />
+                </Grid.ColumnDefinitions>
+
+            </Grid>
+
+            <Frame Margin="0,5,0,0"
+                   CornerRadius="10"
+                   HasShadow="False"
+                   Padding="0"
+                   IsClippedToBounds="True">
+                <StackLayout Spacing="0">
+                    <StackLayout BackgroundColor="#131C25">
+                        <Label Text="Message:"
+                               TextColor="White"
+                               Padding="8" />
+                    </StackLayout>
+                    <StackLayout BackgroundColor="White">
+                        <renderers:BorderlessEntry Placeholder="Provide the message of the SMS"
+                                                   TextColor="Black"
+                                                   x:Name="EntBody" />
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+
+            <Button Text="Submit" x:Name="Submit" Clicked="Submit_Clicked" BackgroundColor="White" Margin="0,20" CornerRadius="10"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

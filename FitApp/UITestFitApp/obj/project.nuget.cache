@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "43dIs1BFTDJymwKgSx6neKfRDRed/+G0fGHv/gdBApz2NfrarFyGRZM4rYT7lGpNLTkOWYZv9EmspewA4Q3n6Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\hhoxh\\source\\repos\\PROJECTYEAR4\\project-diamandhoxha\\FitApp\\UITestFitApp\\UITestFitApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Microsoft\\Xamarin\\NuGet\\nunit\\3.12.0\\nunit.3.12.0.nupkg.sha512",
+    "C:\\Microsoft\\Xamarin\\NuGet\\nunit3testadapter\\3.13.0\\nunit3testadapter.3.13.0.nupkg.sha512",
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.uitest\\3.0.5\\xamarin.uitest.3.0.5.nupkg.sha512"
+  ],
+  "logs": []
+}
